@@ -217,5 +217,6 @@ export function useDeprecatedResourcePermissions(
 		alternative: 'wp.data.useResourcePermissions',
 		since: '6.1',
 	} );
+	// eslint-disable-next-line react-hooks/rules-of-hooks
 	return useResourcePermissions( resource, id );
 }

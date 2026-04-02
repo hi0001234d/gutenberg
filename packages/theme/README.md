@@ -39,6 +39,7 @@ The design system follows the [Design Tokens Community Group (DTCG)](https://des
 | `typography.json` | Font family stacks, font sizes, and line heights                                                                                 |
 | `border.json`     | Border radius and width values                                                                                                   |
 | `elevation.json`  | Shadow definitions for creating depth and layering                                                                               |
+| `motion.json`     | Animation durations and easing curves                                                                                            |
 
 Each JSON file contains both primitive and semantic token definitions in a hierarchical structure. These files are the source of truth for the design system and are processed during the build step to generate CSS custom properties and other output formats in `/src/prebuilt`.
 
@@ -59,20 +60,23 @@ Semantic tokens follow a consistent naming pattern:
 | `border`    | Border properties like radius and width                                        |
 | `elevation` | Shadow definitions for layering and depth                                      |
 | `font`      | Typography properties like family, size, and line-height                       |
+| `motion`    | Animation durations and easing curves                                          |
 
 **Property** is the specific design property being defined.
 
-| Value     | Description                        |
-| --------- | ---------------------------------- |
-| `bg`      | Background color                   |
-| `fg`      | Foreground color (text and icons)  |
-| `stroke`  | Border and outline color           |
-| `padding` | Internal spacing within an element |
-| `gap`     | Spacing between elements           |
-| `radius`  | Border radius for rounded corners  |
-| `width`   | Border width                       |
-| `size`    | Font size                          |
-| `family`  | Font family                        |
+| Value      | Description                        |
+| ---------- | ---------------------------------- |
+| `bg`       | Background color                   |
+| `fg`       | Foreground color (text and icons)  |
+| `stroke`   | Border and outline color           |
+| `padding`  | Internal spacing within an element |
+| `gap`      | Spacing between elements           |
+| `radius`   | Border radius for rounded corners  |
+| `width`    | Border width                       |
+| `size`     | Font size                          |
+| `family`   | Font family                        |
+| `duration` | Animation duration                 |
+| `easing`   | Animation easing curve             |
 
 **Target** is the component or element type the token applies to.
 

@@ -305,6 +305,5 @@ export function useDeprecatedRichText( props ) {
 	deprecated( '`__unstableUseRichText` hook', {
 		since: '7.0',
 	} );
-	// eslint-disable-next-line react-hooks/rules-of-hooks
 	return useRichTextBase( props );
 }

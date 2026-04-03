@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Enhancements
+
+- DataForm: Show tooltip in edit button in `panel` layout. [#77024](https://github.com/WordPress/gutenberg/pull/77024)
+
 ## 14.0.0 (2026-04-01)
 
 ### Breaking Changes

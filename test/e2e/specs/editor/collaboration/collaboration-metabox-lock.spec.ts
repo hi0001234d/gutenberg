@@ -50,6 +50,7 @@ test.describe( 'Collaboration with meta boxes', () => {
 				window?.wp?.data
 					?.select( 'core/editor' )
 					?.isCollaborationEnabledForCurrentPost?.() === false,
+			undefined,
 			{ timeout: 15000 }
 		);
 
@@ -75,6 +76,7 @@ test.describe( 'Collaboration with meta boxes', () => {
 			// Wait for wp.data to be available on User 2's page.
 			await page2.waitForFunction(
 				() => window?.wp?.data && window?.wp?.blocks,
+				undefined,
 				{ timeout: 15000 }
 			);
 

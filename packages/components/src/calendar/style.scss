@@ -227,11 +227,12 @@ $wp-components-calendar-preview-border-color: color-mix(in srgb, $components-col
 
 // Selected date button (individual date, range start, and range end)
 .components-calendar__day--selected:not(.components-calendar__range-middle) {
-	&:has(
-	.components-calendar__day-button,
-	.components-calendar__day-button:hover:not(:disabled)
-) {
+	&:has(.components-calendar__day-button:not(:disabled)) {
 		color: $components-color-foreground-inverted;
+	}
+
+	&:has(.components-calendar__day-button:disabled) {
+		color: $components-color-disabled;
 	}
 
 	.components-calendar__day-button {
@@ -244,7 +245,7 @@ $wp-components-calendar-preview-border-color: color-mix(in srgb, $components-col
 		}
 
 		&:disabled::before {
-			background-color: $components-color-disabled;
+			background-color: $components-color-gray-100;
 		}
 
 		&:hover:not(:disabled)::before {

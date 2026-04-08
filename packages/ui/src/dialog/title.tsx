@@ -15,7 +15,7 @@ import type { TitleProps } from './types';
  * to customize the element if needed.
  */
 const Title = forwardRef< HTMLHeadingElement, TitleProps >(
-	function DialogTitle( { className, render, ...props }, forwardedRef ) {
+	function DialogTitle( { className, ...props }, forwardedRef ) {
 		const validationContext = useDialogValidationContext();
 		const internalRef = useRef< HTMLHeadingElement >( null );
 		const mergedRef = useMergeRefs( [ internalRef, forwardedRef ] );
@@ -29,7 +29,6 @@ const Title = forwardRef< HTMLHeadingElement, TitleProps >(
 			<_Dialog.Title
 				ref={ mergedRef }
 				className={ clsx( styles.title, className ) }
-				render={ render }
 				{ ...props }
 			/>
 		);

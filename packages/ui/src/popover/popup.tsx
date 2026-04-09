@@ -30,7 +30,9 @@ const Popup = forwardRef< HTMLDivElement, PopupProps >( function PopoverPopup(
 		align = 'center',
 		alignOffset,
 		anchor,
-		// Matches the popup's border-radius (--wpds-border-radius-md).
+		// Must be >= the popup's border-radius so the arrow clears rounded
+		// corners. The popup uses --wpds-border-radius-md (currently 4px);
+		// this default adds extra breathing room.
 		arrowPadding = 8,
 		backdrop = false,
 		children,
